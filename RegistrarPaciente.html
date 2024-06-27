@@ -1,26 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <title>Document</title>
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Clínica Salud</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/main.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/RegistrarCitas.html">Registrar Cita</a>
-                </li>
-            </ul>
+
+    <div class="container">
+
+        <h1>Registrar nuevo paciente</h1>
+        <div class="card">
+            <div class="card-header">
+                Datos de la nueva cuenta
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="dni" class="col-sm-2 col-form-label">DNI</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="dni" placeholder="Numero de DNI">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Nombre" class="col-sm-2 col-form-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Nombre" placeholder="Nombre del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Apellido Paterno" class="col-sm-2 col-form-label">Apellido Paterno</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Apellido_p"
+                                placeholder="Apellido_p del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Apellido Materno" class="col-sm-2 col-form-label">Apellido Materno</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Apellido_m"
+                                placeholder="Apellido_m del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Edad" class="col-sm-2 col-form-label">Edad</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Edad" placeholder="Edad del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Genero" class="col-sm-2 col-form-label">Genero</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Genero" placeholder="Genero del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Aseguradora" class="col-sm-2 col-form-label">Aseguradora</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="Aseguradora" placeholder="Codigo de seguradora">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button type="button" class="btnRegistrar">Registar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </nav>
-    
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        $(function () {
+            $("#btnRegistrar").click(fnBtnRegistrar);
+        });
+        
+        function fnBtnRegistrar() {
+            // Datos
+            let dni = $("#dni").val();
+            let Nombre = $("#Nombre").val();
+            let Apellido_p = $("#Apellido_p").val();
+            let Apellido_m = $("#Apellido_m").val();
+            let Edad = $("#Edad").val();
+            let Genero = $("#Genero").val();
+            let Aseguradora = $("#Aseguradora").val();
+
+            var settings = {
+                "url": "http://localhost:8080/Paciente/registrar",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "dni": dni,
+                    "nombre": Nombre,
+                    "apellido_p": Apellido_p,
+                    "apellido_m": Apellido_m,
+                    "edad": Edad,
+                    "genero": Genero,
+                    "id_aseg": Aseguradora
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
+
+    </script>
 </body>
+
 </html>
