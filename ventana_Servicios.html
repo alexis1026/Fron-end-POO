@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Clínica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ventana_service_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Servicios Disponibles</h3>
+                        <div class="d-flex flex-wrap justify-content-around">
+                            <button class="btn btn-primary btn-lg btn-square mb-3" id="getDoctors">Obtener Doctores</button>
+                            <button class="btn btn-secondary btn-lg btn-square mb-3" id="registerAppointment">Registrar Cita</button>
+                            <button class="btn btn-success btn-lg btn-square mb-3" id="registerPatient">Registrar Paciente</button>
+                            <button class="btn btn-warning btn-lg btn-square mb-3" id="makePayment">Realizar Pago</button>
+                            <button class="btn btn-danger btn-lg btn-square mb-3" id="rescheduleAppointment">Reprogramar Cita</button>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-danger btn-lg" id="logoutButton">Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="ventana_service.js"></script>
+</body>
+</html>
+

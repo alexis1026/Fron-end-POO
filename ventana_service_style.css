@@ -1,0 +1,24 @@
+/* Estilos adicionales para ventana_service_style.css */
+.card {
+    border: 1px solid #ddd; /* Borde del card */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.btn-square {
+    border-radius: 0; /* Bordes cuadrados para los botones */
+}
+
+.btn-outline-danger {
+    color: #dc3545; /* Color del texto */
+    border-color: #dc3545; /* Color del borde */
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+}
+
+/* Otros estilos específicos según necesidades */
+
+
