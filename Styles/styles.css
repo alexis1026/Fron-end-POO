@@ -1,0 +1,77 @@
+body {
+    background-color: #13e7dd;
+}
+
+/*Barra de navegacion*/
+.navbar {
+    background-color: #f5f6f7;
+}
+
+.logo-clinica{
+    width: 125px;
+    height: auto;
+}
+
+/*Registar cita*/
+#Registrar {
+    width: 20rem;
+    border-radius: 20%;
+    
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jumbotron {
+    background-color: #007bff;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #e1e0f01c;
+}
+
+/*Footer*/
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    h2 {
+        color: #ffffff;
+    }
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo  h4{
+    color: #fff;
+    border-bottom: 3px solid #f2f3ef23;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}

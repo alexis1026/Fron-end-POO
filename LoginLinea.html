@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Clínica</title>
+    <title>Clínica</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Styles/Stylelogin.css">
+    <link rel="stylesheet" href="/Styles/StylesLoginLinea.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -25,40 +25,44 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="/main.html">Especialidades</a>
                   </li>
-                <li class="nav-item" id="login">
-                  <a class="nav-link" href="/LoginLinea.html">Login up</a>
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/main.html">Servicios</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown.item nav-link">Registrar Dstos</a>
+                        <a href="#" class="dropdown.item nav-link">Registrar Cita</a>
+                        <a href="#" class="dropdown.item nav-link">Registrar Pago</a>
+                    </div>
+                  </li>
+                <li class="nav-item dropdown" id="login">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/Login.html">En Linea</a>
+                  <div class="dropdown-menu">
+                    <a href="/main.html" class="dropdown.item nav-link">Salir</a>
+                  </div>
                 </li>
               </ul>
             </div> 
         </div>
     </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <h3 class="card-title text-center mb-4">Inicio de Sesión</h3>
-                        <form id="loginForm">
-                            <div class="form-group">
-                                <label for="emp_user">Usuario</label>
-                                <input type="text" class="form-control" id="emp_user" placeholder="Ingrese su usuario" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="emp_clave">Contraseña</label>
-                                <input type="password" class="form-control" id="emp_clave" placeholder="Ingrese su contraseña" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-                        </form>
-                        <div id="errorMessage" class="text-danger mt-3" style="display: none;"></div>
-                    </div>
-                </div>
+
+    <footer class="text-center py-4">
+        <div class="contenedor-footer" id="contenedor-footer">
+            <div class="content-foo">
+                <h4>Celular</h4>
+                <p>936970960</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>ruben.condori.m@uni.pe</p>
+            </div>
+            <div class="content-foo">
+                <h4>Dirección</h4>
+                <p>Av. Eduardo de Habich 446</p>
             </div>
         </div>
-    </div>
+        <h2 class="titulo-final">&copy; Grupo 2 Design | Clínica Habich</h2>
+    </footer> 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
-
-
-

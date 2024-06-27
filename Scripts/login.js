@@ -17,7 +17,7 @@ $(document).ready(function() {
             data: JSON.stringify(data),
             success: function(response) {
                 // Redirigir a la página de servicios después de inicio de sesión exitoso
-                window.location.href = 'ventana_Servicios.html';
+                window.location.href = 'LoginLinea.html';
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 // Manejar la respuesta de error del backend
